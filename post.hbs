@@ -7,6 +7,12 @@ into the {body} tag of the default.hbs template --}}
 {{#post}}
 {{!-- Everything inside the #post block pulls data from the post --}}
 
+{{#has tag="de"}}
+    <html lang="de">
+{{ else}}
+    <html lang="en">
+{{/has}}
+
 <article class="article {{post_class}}">
 
     <header class="article-header gh-canvas">
