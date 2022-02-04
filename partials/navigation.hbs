@@ -1,0 +1,31 @@
+{{#if isSecondary}}
+    <div class="my-secondary-nav">
+        <ul class="nav">
+            <!-- Loop through the navigation items -->
+            {{#foreach navigation}}
+            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+            {{/foreach}}
+            <!-- End the loop -->
+        </ul>
+    </div>
+{{else}}
+    <div class="my-nav">
+        <ul class="nav">
+            <!-- Loop through the navigation items -->
+            {{#foreach navigation}}
+            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+            {{/foreach}}
+            <!-- End the loop -->
+
+            <li class="nav">
+            {{#if @member}}
+                <a class="umami--click--analytics-member" href="https://analytics.ajfriesen.com/share/q3H08pFN/ajfriesen">Analytics</a>
+                {{!-- If you find this let me know ;-) --}}
+            {{else}}
+                <a class="umami--click--analytics-no-member" href="{{@site.url}}/membership">Analytics</a>
+            {{/if}}
+            </li>
+            <li class="nav"><a class="umami--click--forum" href="https://forum.ajfriesen.com/">Forum</a></li>
+        </ul>
+    </div>
+{{/if}}
