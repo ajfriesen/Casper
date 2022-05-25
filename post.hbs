@@ -113,8 +113,9 @@ into the {body} tag of the default.hbs template --}}
 {{#if access}}
     <section class="footer-cta outer">
         <div class="inner">
+
             {{#if @custom.email_signup_text}}<h2 class="footer-cta-title">{{@custom.email_signup_text}}</h2>{{/if}}
-            <a class="footer-cta-button" href="#/portal" data-portal>
+            <a class="footer-cta-button umami--click--subscribe-footer" href="#/portal" data-portal>
                 <div class="footer-cta-input">Enter your email</div>
                 <span>Subscribe</span>
             </a>
