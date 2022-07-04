@@ -56,19 +56,25 @@
                 <button class="gh-search" data-ghost-search>{{> "icons/search"}}</button>
                 <div class="gh-social">
                     {{#if @site.facebook}}
-                        <a class="gh-social-link gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                        <a class="gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
                     {{/if}}
                     {{#if @site.twitter}}
-                        <a class="gh-social-link gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                        <a class="gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
                     {{/if}}
+                    {{!-- My added stuff --}}
+                    <a class="gh-social-reddit" href="https://www.reddit.com/user/ajfriesen" title="Reddit" target="_blank" rel="noopener">{{> "icons/reddit"}}</a>
+                    <a class="gh-social-instagram" href="https://instagram.com/mr_ajfriesen" title="Instagram" target="_blank" rel="noopener">{{> "icons/instagram"}}</a>
+                    <a class="gh-social-github" href="https://github.com/ajfriesen/" title="GitHub" target="_blank" rel="noopener">{{> "icons/github"}}</a>
+                    <a class="gh-social-twitch" href="https://www.twitch.tv/ajfriesen" title="Twitch" target="_blank" rel="noopener">{{> "icons/twitch"}}</a>
+                    <a class="gh-social-rss" href="{{@site.url}}/rss" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+                    {{!-- My added stuff --}}
                 </div>
-                {{#if @site.members_enabled}}
-                    {{#unless @member}}
-                        <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
-                    {{else}}
-                        <a class="gh-head-button" href="#/portal/account" data-portal="account">Account</a>
-                    {{/unless}}
-                {{/if}}
+
+                {{#unless @member}}
+                    <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                {{else}}
+                    <a class="gh-head-button" href="#/portal/account" data-portal="account">Account</a>
+                {{/unless}}
             </div>
         </nav>
     </header>
